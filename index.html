@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'"
+        />
+        <meta
+            http-equiv="X-Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'"
+        />
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+        <title>專案傳送器</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="tabs">
+            <input type="radio" id="tab1" class="tab_but" name="butt" checked>
+            <label for="tab1" class="tab_label">hangman</label>
+            <div class="tab_content">
+                <div>純c寫的經典的hangman單字遊戲</div>
+                <div>每次猜一個出現在目標單字裡的字母</div>
+                <div>錯了就會失去一次機會，一直到遊戲裡的人被完全上吊為止</div>
+                <button class="launch" value="hanging_man"><strong>執行</strong></button>
+            </div>
+            <!--next tab-->
+            <input type="radio" id="tab2" class="tab_but" name="butt">
+            <label for="tab2" class="tab_label">打字遊戲</label>
+            <div class="tab_content">
+                <div>利用ncurses函示庫編寫的終端機應用程式(cli)</div>
+                <div>模仿一般打字遊戲，會根據時間跟錯別字計算wpm(words per minute)</div>
+                <div>打得對錯都會有相對應的文字</div>
+                <button class="launch" value="typing"><strong>執行</strong></button>
+            </div>
+        </div>
+    </body>
+    <script src="renderer.js"></script>
+</html>

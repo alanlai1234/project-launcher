@@ -1,0 +1,75 @@
+body {
+    background-color: black;
+    font-family: FiraCode NF;
+    font-size: 30px;
+}
+
+/* tab itself */
+.tabs {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tab_label {
+    margin-top: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-bottom: 2px solid black;
+}
+.tab_label:hover {
+    opacity: 0.7;
+}
+.tab_but {
+    display: none;
+}
+.tab_but:checked+.tab_label {
+    color: rgb(42, 206, 119);
+    border-bottom: 2px solid rgb(42, 206, 119);
+}
+
+/* contents */
+.tab_content {
+    color: rgb(42, 206, 119);
+    padding-top: 10px;
+    order: 1;
+    width: 100%;
+    text-align: left;
+    display: none;
+}
+.tab_but:checked+.tab_label+.tab_content {
+    display: grid;
+    place-items: left;
+}
+.tab_but:checked+.tab_label+.tab_content div{
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@keyframes typing {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* launch button */
+.launch {
+    margin-top: 10px;
+    width: 150px;
+    height: 40px;
+    background-color:rgb(176, 229, 201);
+    transition-duration: 0.3s;
+    cursor: pointer;
+    font-size: 19px;
+    color: black;
+    border-radius: 10px;
+}
+.launch:hover {
+    background-color:rgb(219, 191, 115);
+}
