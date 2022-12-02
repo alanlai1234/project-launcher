@@ -8,7 +8,7 @@ const {spawn} = require("child_process")
 
 // run binary
 ipcMain.on('open', (event, name) => {
-    const exe = spawn('wt', ['new-tab', 'cmd', '/k', 'wsl', '--cd', '/home/alan/project_bin', '--', './'+name])
+    const exe = spawn('wt', ['new-tab', 'cmd', '/k', 'wsl', '--cd', '/home/archwsl/project_bin', '--', './'+name])
 });
 
 const mainWindow = () => {
