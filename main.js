@@ -16,6 +16,8 @@ const mainWindow = () => {
         // width: 800,
         // height: 600,
         autoHideMenuBar: true,
+        show: false,
+        icon: "ckcsc.jpg",
         webPreferences: {
             preload: path.join(__dirname, "preload.js")
         }
